@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: reptilianusbileciktusaksworkshop 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reptilianusbileciktusaksworkshop
+  template:
+    metadata:
+      labels:
+        app: reptilianusbileciktusaksworkshop 
+    spec:
+      containers:
+        - name: reptilianusbileciktusaksworkshop 
+          image: acr20130.azurecr.io/reptilianusbileciktusaksworkshop
+          ports:
+          - containerPort: 3000
